@@ -1,5 +1,5 @@
 
-from chestclassification.entity.config_entity import (PrepareBaseModelConfig)
+from chestclassification.entity.config_entity import PrepareBaseModelConfig
 from pathlib import Path
 
 

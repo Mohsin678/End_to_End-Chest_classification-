@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/datascience/projects/End_to_End-Chest_classification/mlruns/0/a4b95cc6478f47bd9a406a6cc591d7db/artifacts
+end_time: 1715238924248
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: a4b95cc6478f47bd9a406a6cc591d7db
+run_name: upbeat-ray-52
+run_uuid: a4b95cc6478f47bd9a406a6cc591d7db
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715238863913
+status: 3
+tags: []
+user_id: Home

@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/datascience/projects/End_to_End-Chest_classification/mlruns/0/bbce3901c0904e0e817382d90fbd631b/artifacts
+end_time: 1715243437957
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: bbce3901c0904e0e817382d90fbd631b
+run_name: dashing-loon-787
+run_uuid: bbce3901c0904e0e817382d90fbd631b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1715243381871
+status: 3
+tags: []
+user_id: Home
