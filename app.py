@@ -1,0 +1,46 @@
+from flask import Flask,request,jsonify,render_template
+import os
+from flask_cors import CORS,cross_origin
+from chestclassification.utils.common import decodeImage
+from chestclassification.pipeline.prediction import Predictionpipeline
+
+
+os.putenv("LANG", "en_US.UTF-8")
+os.putenv("LC_ALL","en_US.UTF-8")
+
+
+app = Flask(__name__)
+CORS(app)
+
+class clientApp:
+    def __init__(self):
+        self.filename  = "inputImage.jpg"
+        self.classifier = Predictionpipeline(self.filename)
+
+
+
+@app.route("/", methods=["GET"])
+@cross_origin()
+def home():
+    return render_template("index.html")
+
+
+@app.route("/train", methods=["GET","POST"])
+@cross_origin()
+def TrainRoute():
+    os.system("pyton main.py")
+    return "Training done successfully"
+
+
+@app.route("/predict", methods=["POST"])
+@cross_origin()
+def predictroute():
+    image = request.json["image"]
+    decodeImage(image,clApp.filename)
+    result = clApp.classifier.predict()
+    return jsonify(result)
+
+
+if __name__ == "__main__":
+    clApp = clientApp()
+    app.run(host = "0.0.0.0",port=8080)
