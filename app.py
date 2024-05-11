@@ -2,7 +2,7 @@ from flask import Flask,request,jsonify,render_template
 import os
 from flask_cors import CORS,cross_origin
 from chestclassification.utils.common import decodeImage
-from chestclassification.pipeline.prediction import Predictionpipeline
+from chestclassification.pipeline.prediction import PredictionPipeline
 
 
 os.putenv("LANG", "en_US.UTF-8")
@@ -15,7 +15,7 @@ CORS(app)
 class clientApp:
     def __init__(self):
         self.filename  = "inputImage.jpg"
-        self.classifier = Predictionpipeline(self.filename)
+        self.classifier = PredictionPipeline(self.filename)
 
 
 
@@ -28,7 +28,7 @@ def home():
 @app.route("/train", methods=["GET","POST"])
 @cross_origin()
 def TrainRoute():
-    os.system("pyton main.py")
+    os.system("python main.py")
     return "Training done successfully"
 
 
